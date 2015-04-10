@@ -2,7 +2,6 @@
 # of containing the game logic directly.
 class window.App extends Backbone.Model
   initialize: ->
-    @set 'deck', new Deck()
 
     #instantiate Game model
-    @set 'game', new Blackjack(collection: @get('deck'))
+    @set 'game', @game
