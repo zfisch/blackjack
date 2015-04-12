@@ -6,6 +6,9 @@ class window.Hand extends Backbone.Collection
   draw: ->
     @add(@deck.pop())
 
+  endTurn: ->
+    @trigger('endTurn')
+
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
   , 0
